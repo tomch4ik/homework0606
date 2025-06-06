@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p
+        {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+            padding-left: 10px;       
+        }
+    </style>
+</head>
+<body>
+    <div id="app"> </div>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Задание 1
+Создайте и запустите приложение React, выводящее
+информацию о вашей любимой книге в браузер. Например:
+название книги, ФИО автора, жанр книги, количество
+страниц, несколько рецензий на неё.
+При разработке нужно использовать  синтаксис JSX. -->
+
+<script type="text/babel">
+
+const Book = {
+    BookName:'Покорение южного полюса. Гонка лидеров',
+    Author:'Роланд Хантфорд',
+    Genre:'Приключения',
+    Pages: 891,
+    Description1:'Хантфорд мастерски передаёт напряжение великой арктической гонки, раскрывая характеры лидеров через призму их решений. Книга не только увлекает, но и заставляет задуматься о цене лидерства и различии подходов к управлению.',
+    Description2:'«Гонка лидеров» — это не просто история экспедиции, а глубокий анализ человеческих качеств, приводящих к победе или поражению. Чтение оставляет сильное впечатление и вдохновляет на развитие личной ответственности.',
+    Image: '/1b.jpg'
+};
+
+const StyleObj={
+    color:'black',
+    backgroundColor: 'beige',
+    border:'1px solid black',
+    marginLeft:'10px' 
+};
+
+const styleImg={
+    width:'200px',
+    height:'300px'
+}
+const div = document.getElementById("app");
+
+const Root = ReactDOM.createRoot(div);
+
+Root.render(
+    <div style={StyleObj}>
+        <div>
+          <img src= {Book.Image} style={styleImg}/>
+         </div>
+         <div>
+            <p>{Book.BookName}</p>
+            <p>{Book.Author}</p>
+            <p>{Book.Genre}</p>
+            <p>{Book.Pages}</p>
+            <p>{Book.Description1}</p>
+            <p>{Book.Description2}</p>
+         </div>           
+    </div>    
+);
+</script>
+
+</body>
+</html>

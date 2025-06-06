@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p
+        {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+            padding-left: 10px;       
+        }
+    </style>
+</head>
+<body>
+    <div id="app"> </div>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Задание 1
+Создайте и запустите приложение React, выводящее
+информацию о вашей любимой книге в браузер. Например:
+название книги, ФИО автора, жанр книги, количество
+страниц, несколько рецензий на неё.
+При разработке нужно использовать  синтаксис JSX. -->
+
+<script type="text/babel">
+
+const MusicGroup = {
+    Name:'Linkin Park',
+    Participants:'Честер Беннингтон, Майк Шинода, Брэд Делсон, Дэйв Фаррелл, Роб Бурдон, Джо Хан',
+    Albom1:'Hybrid Theory',
+    Albom2:'Meteora',
+    Albom3:'A Thousand Suns',
+    Image1: '/albom1.jpg',
+    Image2: '/albom2.jpg',
+    Image3: '/albom3.jpg'
+};
+
+const StyleObj={
+    color:'black',
+    backgroundColor: 'beige',
+    border:'1px solid black',
+    marginLeft:'10px' 
+};
+
+const styleImg={
+    width:'320px',
+    height:'320px'
+}
+const div = document.getElementById("app");
+
+const Root = ReactDOM.createRoot(div);
+
+Root.render(
+    <div style={StyleObj}>
+         <div>
+            <p>{MusicGroup.Name}</p>
+            <p>{MusicGroup.Participants}</p>
+         </div>   
+         <div>
+          <img src= {MusicGroup.Image1} style={styleImg}/>
+         </div>   
+         <div>
+            <p>{MusicGroup.Albom1}</p>
+         </div>      
+         <div>
+          <img src= {MusicGroup.Image2} style={styleImg}/>
+         </div>   
+         <div>
+            <p>{MusicGroup.Albom2}</p>
+         </div>   
+         <div>
+          <img src= {MusicGroup.Image3} style={styleImg}/>
+         </div>   
+         <div>
+            <p>{MusicGroup.Albom3}</p>
+         </div>   
+    </div>    
+);
+</script>
+
+</body>
+</html>

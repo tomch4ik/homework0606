@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Великий Человек</title>
+    <style>
+        p
+        {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+            padding-left: 10px;       
+        }
+    </style>
+</head>
+<body>
+    <div id="app"> </div>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Задание 1
+Создайте и запустите приложение React, выводящее
+информацию о вашей любимой книге в браузер. Например:
+название книги, ФИО автора, жанр книги, количество
+страниц, несколько рецензий на неё.
+При разработке нужно использовать  синтаксис JSX. -->
+
+<script type="text/babel">
+
+const Person = {
+    Name:'Альберт Эйнштейн',
+    Years:'1879-1955',
+    Image: '/3p.jpg',
+    Biography:'Альберт Эйнштейн — один из величайших физиков в истории, родился в 1879 году в городе Ульм, Германия. Он прославился созданием теории относительности, которая коренным образом изменила представления о времени и пространстве. Его уравнение E=mc^2 стало символом современной физики. В 1921 году он получил Нобелевскую премию по физике за объяснение фотоэффекта. Эйнштейн эмигрировал в США в 1933 году, спасаясь от нацистского режима. В течение многих лет он преподавал в Принстонском университете. Учёный активно выступал за мир, науку и права человека. Несмотря на его научные достижения, он оставался скромным и философским человеком. Эйнштейн также играл важную роль в создании письма Рузвельту, что повлияло на развитие атомной бомбы. Он скончался в 1955 году, оставив богатое научное и гуманистическое наследие.'
+};
+
+const StyleObj={
+    color:'black',
+    backgroundColor: 'beige',
+    border:'1px solid black',
+    marginLeft:'10px' 
+};
+
+const styleImg={
+    width:'200px',
+    height:'300px'
+}
+const div = document.getElementById("app");
+
+const Root = ReactDOM.createRoot(div);
+
+Root.render(
+    <div style={StyleObj}>
+        <div>
+            <p>{Person.Name}</p>
+            <p>{Person.Years}</p>
+        </div>   
+        <div>
+          <img src= {Person.Image} style={styleImg}/>
+        </div>
+         <div>
+            <p>{Person.Biography}</p>
+        </div>           
+    </div>    
+);
+</script>
+
+</body>
+</html>

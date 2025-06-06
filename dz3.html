@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p
+        {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+            padding-left: 10px;       
+        }
+    </style>
+</head>
+<body>
+    <div id="app"> </div>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Задание 1
+Создайте и запустите приложение React, выводящее
+информацию о вашей любимой книге в браузер. Например:
+название книги, ФИО автора, жанр книги, количество
+страниц, несколько рецензий на неё.
+При разработке нужно использовать  синтаксис JSX. -->
+
+<script type="text/babel">
+
+const Recipe = {
+    Name:'Стейк с жареными овощами',
+    Ingredients: `Для стейка:
+        Говяжий стейк (рибай, стриплойн или другой) — 2 шт. по 200–250 г
+        Соль, перец — по вкусу
+        Оливковое масло — 1 ст. л.
+        Чеснок — 2 зубчика
+        Веточка розмарина или тимьяна — по желанию
+        Сливочное масло — 20 г
+
+        Для овощей:
+        Болгарский перец — 1 шт.
+        Цукини — 1 шт.
+        Баклажан — 1/2 шт.
+        Лук красный — 1/2 шт.
+        Помидоры черри — горсть
+        Оливковое масло — 1–2 ст. л.
+        Соль, перец — по вкусу`,    
+    Instruction:`Приготовление:
+        1. Подготовка овощей:
+
+        Нарежьте овощи крупными кусочками.
+        Разогрейте сковороду-гриль или обычную сковороду, добавьте масло.
+        Обжаривайте овощи до румяной корочки, посолите и поперчите. Снимите с огня.
+
+        2. Подготовка стейка:
+
+        Достаньте стейк из холодильника за 30 минут до жарки. Промокните бумажным полотенцем.
+        Натрите солью и перцем с двух сторон.
+        Разогрейте сковороду на сильном огне. Добавьте немного оливкового масла.
+        Обжаривайте стейк по 2–3 минуты с каждой стороны (для прожарки medium).
+        Добавьте сливочное масло, чеснок и травы. Поливайте стейк маслом с травами ещё 1–2 минуты.
+        Дайте мясу отдохнуть 5 минут на тарелке под фольгой.`,
+    End:'Выложите стейк на тарелку, рядом — жареные овощи. Можно добавить немного соуса (например, чесночного или горчичного).',
+    Image: '/food.jpg'
+};
+
+const StyleObj={
+    color:'black',
+    backgroundColor: 'beige',
+    border:'1px solid black',
+    marginLeft:'10px' 
+};
+
+const styleImg={
+    width:'360px',
+    height:'360px'
+}
+const div = document.getElementById("app");
+
+const Root = ReactDOM.createRoot(div);
+
+Root.render(
+    <div style={StyleObj}>
+         <div>
+            <p>{Recipe.Name}</p>
+            <p>{Recipe.Ingredients}</p>
+            <p>{Recipe.Instruction}</p>
+            <p>{Recipe.End}</p>
+         </div>   
+        <div>
+          <img src= {Recipe.Image} style={styleImg}/>
+        </div>        
+    </div>    
+);
+</script>
+
+</body>
+</html>
