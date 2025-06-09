@@ -1,0 +1,12 @@
+#cityimg
+{
+    width: 320px;
+    height: 320px;
+}
+#ct
+{
+    color: black;
+    background-color: rgb(173, 237, 224);
+    border: 1px solid black;
+    margin-left: 10px;
+}

@@ -1,0 +1,12 @@
+#rcp
+{
+    color:black;
+    background-Color: rgb(180, 105, 231);
+    border: 1px solid black;
+    margin-Left: 10px; 
+}
+#rcpimg
+{
+    width: 360px;
+    height: 360px;
+}

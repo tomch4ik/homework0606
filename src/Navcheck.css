@@ -1,0 +1,21 @@
+#nav ul
+{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#nav ul li
+{
+    background-color: aqua;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
+#nav ul li:hover
+{
+    background-color: yellow;
+
+}

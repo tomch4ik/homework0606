@@ -1,0 +1,11 @@
+#prof{
+    color: black;
+    background-color: beige;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+p
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    padding-left: 10px;       
+}
